@@ -20,21 +20,6 @@ async def main():
 # asyncio.run(main())
 
 
-def send_to_telegram(image_path):
-    # 텔레그램 봇 토큰과 채팅 ID 설정
-    bot_token =  "6414607293:AAF8UQ8pr_-7QGw1rbM26-wHsCqOEJnxf74"
-    chat_id = "6327129513"
-
-    # 텔레그램 봇 인스턴스 생성
-    bot = telegram.Bot(token=bot_token)
-
-    # 이미지 파일 열기
-    with open(image_path, 'rb') as image_file:
-        # 이미지 파일 전송
-        bot.send_photo(chat_id=chat_id, photo=image_file)
-
-# ... (생략) ...
-
 def save_and_extract_keywords():
     url = "https://trends.google.co.kr/trends/trendingsearches/daily?geo=KR&hl=ko"
 
@@ -116,9 +101,6 @@ def save_and_extract_keywords():
 
     # 워드 클라우드 PNG 파일 경로
     wordcloud_png_file_path = os.path.join(folder_path, wordcloud_png_filename)
-
-    # 텔레그램으로 이미지 전송
-    send_to_telegram(wordcloud_png_file_path)
 
     token = "6414607293:AAF8UQ8pr_-7QGw1rbM26-wHsCqOEJnxf74"
     bot = telegram.Bot(token)
