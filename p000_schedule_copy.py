@@ -16,11 +16,6 @@ import asyncio
 
 async def main():
 
-    token = "6414607293:AAF8UQ8pr_-7QGw1rbM26-wHsCqOEJnxf74"
-    bot = telegram.Bot(token)
-
-    await bot.send_message(chat_id="6327129513", text="hello")
-
 # asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 # asyncio.run(main())
 
